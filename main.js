@@ -2,41 +2,41 @@ const games = [
   {
     "id": "basketball-stars-2026",
     "name": "Basketball Stars 2026",
-    "url": "https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/?gd_sdk_referrer_url=https://basketballstars2026.io/basketball-stars-2026",
+    "url": "https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/",
     "category": "Sports",
-    "description": "The ultimate basketball game for 2026. Master your shots, block your opponents, and dominate the court.",
+    "description": "The ultimate basketball experience with refined shots and intense matchups.",
     "thumbnail": "https://tcf.admeen.org/game/19500/19230/400x246/basketball-stars-2026.webp"
   },
   {
     "id": "eggy-car",
     "name": "Eggy Car",
-    "url": "https://classroom-6x.github.io/eggy-car/",
+    "url": "https://html5.gamedistribution.com/712396105f2c45388c34f2482e9644e5/",
     "category": "Arcade",
-    "description": "Drive a car with an egg on top and try not to break it while over hills and valleys.",
+    "description": "Drive carefully over steep hills while keeping the egg safe. Precision is everything!",
     "thumbnail": "https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg"
   },
   {
     "id": "subway-surfers",
     "name": "Subway Surfers",
-    "url": "https://subwaysurferscity.io/subway-surfers-zurich.embed",
+    "url": "https://html5.gamedistribution.com/760432130e9d40cd8c16056345ec48df/",
     "category": "Action",
-    "description": "Dash and dodge as fast as you can through the subway tunnels.",
+    "description": "Dash, dodge, and surf through the tunnels in this iconic endless runner.",
     "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/231cb237ab22763a61c2ca0eac6a3760/subway-surfers.png"
   },
   {
     "id": "moto-x3m",
     "name": "Moto X3M",
-    "url": "https://classroom-6x.github.io/moto-x3m/",
+    "url": "https://html5.gamedistribution.com/f04c0d4a999849208034d618a80479b1/",
     "category": "Sports",
-    "description": "The best moto racing game with 22 levels, gravity-defying loops, and explosive traps. Perform stunts to shave seconds off your time!",
+    "description": "Conquer extreme tracks and explosive obstacles in this classic stunt racing game.",
     "thumbnail": "https://imgs.crazygames.com/moto-x3m_1x1/20231122033955/moto-x3m_1x1-cover?format=auto&quality=100&metadata=none&width=1200"
   },
   {
     "id": "snow-rider-3d",
     "name": "Snow Rider 3D",
-    "url": "https://classroom-6x.github.io/snow-rider-3d/",
+    "url": "https://html5.gamedistribution.com/6df63309e44040a4bf855e96684a0c8d/",
     "category": "Sports",
-    "description": "Experience the thrill of downhill sledding in Snow Rider 3D. Dodge obstacles and collect gifts!",
+    "description": "High-speed downhill sledding in a beautiful 3D winter wonderground.",
     "thumbnail": "https://i0.wp.com/diva-magazine.com/wp-content/uploads/2025/11/snow-rider-3d.jpg?fit=640%2C640&ssl=1"
   }
 ];
