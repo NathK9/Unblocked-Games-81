@@ -1,44 +1,34 @@
 [
   {
-    "id": "slope",
-    "name": "Slope",
-    "url": "https://kdata1.com/2020/05/slope/",
-    "category": "Action",
-    "description": "A fast-paced 3D speed run game where you roll down a neon slope."
-  },
-  {
-    "id": "tunnel-rush",
-    "name": "Tunnel Rush",
-    "url": "https://kdata1.com/2020/06/tunnel-rush/",
-    "category": "High Speed",
-    "description": "Navigate through neon tunnels at insane speeds."
-  },
-  {
-    "id": "retro-bowl",
-    "name": "Retro Bowl",
-    "url": "https://kdata1.com/2020/06/retro-bowl/",
+    "id": "basketball-stars-2026",
+    "name": "Basketball Stars 2026",
+    "url": "https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/?gd_sdk_referrer_url=https://basketballstars2026.io/basketball-stars-2026",
     "category": "Sports",
-    "description": "The perfect game for the armchair quarterback."
+    "description": "The ultimate basketball game for 2026. Master your shots, block your opponents, and dominate the court.",
+    "thumbnail": "https://tcf.admeen.org/game/19500/19230/400x246/basketball-stars-2026.webp"
   },
   {
-    "id": "geometry-dash",
-    "name": "Geometry Dash",
-    "url": "https://kdata1.com/2020/07/geometry-dash-world-lite/",
-    "category": "Platformer",
-    "description": "Jump and fly your way through danger in this rhythm-based action platformer."
+    "id": "eggy-car",
+    "name": "Eggy Car",
+    "url": "https://html5.gamedistribution.com/712396105f2c45388c34f2482e9644e5/",
+    "category": "Arcade",
+    "description": "Drive a car with an egg on top and try not to break it while over hills and valleys.",
+    "thumbnail": "https://tcf.admeen.org/game/16500/16238/400x246/eggy-car.webp"
   },
   {
-    "id": "cookie-clicker",
-    "name": "Cookie Clicker",
-    "url": "https://orteil.dashnet.org/cookieclicker/",
-    "category": "Idle",
-    "description": "The classic idle game about baking cookies."
+    "id": "subway-surfers",
+    "name": "Subway Surfers",
+    "url": "https://html5.gamedistribution.com/6949397750fb4e5a953e5e4d25712c96/",
+    "category": "Action",
+    "description": "Dash and dodge as fast as you can through the subway tunnels.",
+    "thumbnail": "https://tcf.admeen.org/game/14500/14298/400x246/subway-surfers.webp"
   },
   {
-    "id": "tetris",
-    "name": "Tetris",
-    "url": "https://tetris.com/play-tetris",
-    "category": "Classic",
-    "description": "The world-famous puzzle game that everyone knows and loves."
+    "id": "moto-x3m",
+    "name": "Moto X3M",
+    "url": "https://html5.gamedistribution.com/f04c0d4a999849208034d618a80479b1/",
+    "category": "Sports",
+    "description": "The best moto racing game with challenging levels and crazy stunts.",
+    "thumbnail": "https://tcf.admeen.org/game/13500/13298/400x246/moto-x3m.webp"
   }
 ]
