@@ -26,10 +26,10 @@ const games = [
   {
     "id": "moto-x3m",
     "name": "Moto X3M",
-    "url": "https://html5.gamedistribution.com/f04c0d4a999849208034d618a80479b1/",
+    "url": "https://games.crazygames.com/en_US/moto-x3m/index.html?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false&v=1.356",
     "category": "Sports",
     "description": "The best moto racing game with challenging levels and crazy stunts.",
-    "thumbnail": "https://tcf.admeen.org/game/13500/13298/400x246/moto-x3m.webp"
+    "thumbnail": "https://imgs.crazygames.com/moto-x3m_1x1/20231122033955/moto-x3m_1x1-cover?format=auto&quality=100&metadata=none&width=1200"
   },
   {
     "id": "snow-rider-3d",
@@ -90,11 +90,12 @@ function renderCategories() {
     
     categoryBar.innerHTML = '';
     categories.forEach(cat => {
+        const theme = categoryThemes[cat] || categoryThemes['Default'];
         const btn = document.createElement('button');
         btn.textContent = cat;
-        btn.className = `px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+        btn.className = `px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all duration-300 ${
             selectedCategory === cat
-              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/20 ring-1 ring-white/20'
+              ? `${theme.accent} text-white shadow-lg ring-2 ring-white/20 scale-105`
               : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10'
         }`;
         btn.onclick = () => setCategory(cat);
@@ -104,57 +105,57 @@ function renderCategories() {
 
 const categoryThemes = {
     'Sports': { 
-        bg: 'bg-indigo-500/10', 
-        ring: 'ring-indigo-500/20', 
-        text: 'text-indigo-400', 
-        accent: 'bg-indigo-600',
-        border: 'hover:border-indigo-500/30',
-        hoverText: 'group-hover:text-indigo-400',
+        bg: 'bg-emerald-500/20', 
+        ring: 'ring-emerald-500/30', 
+        text: 'text-emerald-400', 
+        accent: 'bg-emerald-500',
+        border: 'hover:border-emerald-500/50',
+        hoverText: 'group-hover:text-emerald-400',
         icon: 'trophy' 
     },
     'Action': { 
-        bg: 'bg-rose-500/10', 
-        ring: 'ring-rose-500/20', 
+        bg: 'bg-rose-500/20', 
+        ring: 'ring-rose-500/30', 
         text: 'text-rose-400', 
-        accent: 'bg-rose-600',
-        border: 'hover:border-rose-500/30',
+        accent: 'bg-rose-500',
+        border: 'hover:border-rose-500/50',
         hoverText: 'group-hover:text-rose-400',
         icon: 'zap' 
     },
     'Arcade': { 
-        bg: 'bg-amber-500/10', 
-        ring: 'ring-amber-500/20', 
+        bg: 'bg-amber-500/20', 
+        ring: 'ring-amber-500/30', 
         text: 'text-amber-400', 
-        accent: 'bg-amber-600',
-        border: 'hover:border-amber-500/30',
+        accent: 'bg-amber-500',
+        border: 'hover:border-amber-500/50',
         hoverText: 'group-hover:text-amber-400',
         icon: 'joystick' 
     },
     'Puzzle': { 
-        bg: 'bg-emerald-500/10', 
-        ring: 'ring-emerald-500/20', 
-        text: 'text-emerald-400', 
-        accent: 'bg-emerald-600',
-        border: 'hover:border-emerald-500/30',
-        hoverText: 'group-hover:text-emerald-400',
+        bg: 'bg-cyan-500/20', 
+        ring: 'ring-cyan-500/30', 
+        text: 'text-cyan-400', 
+        accent: 'bg-cyan-500',
+        border: 'hover:border-cyan-500/50',
+        hoverText: 'group-hover:text-cyan-400',
         icon: 'brain' 
     },
     'Strategy': { 
-        bg: 'bg-violet-500/10', 
-        ring: 'ring-violet-500/20', 
-        text: 'text-violet-400', 
-        accent: 'bg-violet-600',
-        border: 'hover:border-violet-500/30',
-        hoverText: 'group-hover:text-violet-400',
+        bg: 'bg-fuchsia-500/20', 
+        ring: 'ring-fuchsia-500/30', 
+        text: 'text-fuchsia-400', 
+        accent: 'bg-fuchsia-500',
+        border: 'hover:border-fuchsia-500/50',
+        hoverText: 'group-hover:text-fuchsia-400',
         icon: 'shield' 
     },
     'Default': { 
-        bg: 'bg-blue-500/10', 
-        ring: 'ring-blue-500/20', 
-        text: 'text-blue-400', 
-        accent: 'bg-blue-600',
-        border: 'hover:border-blue-500/30',
-        hoverText: 'group-hover:text-blue-400',
+        bg: 'bg-indigo-500/20', 
+        ring: 'ring-indigo-500/30', 
+        text: 'text-indigo-400', 
+        accent: 'bg-indigo-500',
+        border: 'hover:border-indigo-500/50',
+        hoverText: 'group-hover:text-indigo-400',
         icon: 'gamepad' 
     }
 };
@@ -213,10 +214,10 @@ function applyFilters() {
                     </div>
                 </div>
                 ${!isFiltered ? `
-                <button onclick="setCategory('${cat}')" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-2">
-                    ALL <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+                <button onclick="setCategory('${cat}')" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-2 group/all">
+                    ALL <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500 group-hover/all:text-white transition-colors"></i>
                 </button>
-                ` : '<div class="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent ml-8"></div>'}
+                ` : `<div class="h-px flex-1 bg-gradient-to-r from-${theme.text.split('-')[1]}-500/40 to-transparent ml-8"></div>`}
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 md:gap-6">
                 <!-- Cards for this category injected here -->
@@ -238,7 +239,8 @@ window.setCategory = setCategory;
 
 function createGameCard(game, theme) {
     const div = document.createElement('div');
-    div.className = `group relative bg-[#15151a] rounded-xl overflow-hidden border border-white/5 ${theme.border} transition-all duration-300 cursor-pointer hover:-translate-y-1`;
+    const glowColor = theme.text.split('-')[1];
+    div.className = `group relative bg-[#15151a] rounded-xl overflow-hidden border border-white/5 ${theme.border} transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-${glowColor}-500/20`;
     div.onclick = () => playLevel(game);
 
     const thumbnailHtml = game.thumbnail 
