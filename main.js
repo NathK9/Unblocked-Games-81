@@ -1,26 +1,68 @@
-let games = [];
+const games = [
+  {
+    "id": "basketball-stars-2026",
+    "name": "Basketball Stars 2026",
+    "url": "https://html5.gamedistribution.com/516d6908fbc848bdb89e65a58a43a7dc/?gd_sdk_referrer_url=https://basketballstars2026.io/basketball-stars-2026",
+    "category": "Sports",
+    "description": "The ultimate basketball game for 2026. Master your shots, block your opponents, and dominate the court.",
+    "thumbnail": "https://tcf.admeen.org/game/19500/19230/400x246/basketball-stars-2026.webp"
+  },
+  {
+    "id": "eggy-car",
+    "name": "Eggy Car",
+    "url": "https://classroom-6x.github.io/eggy-car/",
+    "category": "Arcade",
+    "description": "Drive a car with an egg on top and try not to break it while over hills and valleys.",
+    "thumbnail": "https://i.ytimg.com/vi/U2SgrOeRrrs/maxresdefault.jpg"
+  },
+  {
+    "id": "subway-surfers",
+    "name": "Subway Surfers",
+    "url": "https://subwaysurferscity.io/subway-surfers-zurich.embed",
+    "category": "Action",
+    "description": "Dash and dodge as fast as you can through the subway tunnels.",
+    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/231cb237ab22763a61c2ca0eac6a3760/subway-surfers.png"
+  },
+  {
+    "id": "moto-x3m",
+    "name": "Moto X3M",
+    "url": "https://html5.gamedistribution.com/f04c0d4a999849208034d618a80479b1/",
+    "category": "Sports",
+    "description": "The best moto racing game with challenging levels and crazy stunts.",
+    "thumbnail": "https://tcf.admeen.org/game/13500/13298/400x246/moto-x3m.webp"
+  },
+  {
+    "id": "snow-rider-3d",
+    "name": "Snow Rider 3D",
+    "url": "https://classroom-6x.github.io/snow-rider-3d/",
+    "category": "Sports",
+    "description": "Experience the thrill of downhill sledding in Snow Rider 3D. Dodge obstacles and collect gifts!",
+    "thumbnail": "https://i0.wp.com/diva-magazine.com/wp-content/uploads/2025/11/snow-rider-3d.jpg?fit=640%2C640&ssl=1"
+  }
+];
+
 let filteredGames = [];
 let selectedCategory = 'All';
 let searchQuery = '';
 
 console.log('Unblocked Games 81: App Initializing...');
 
-async function init() {
+function init() {
     try {
-        const response = await fetch('./games.json');
-        if (!response.ok) throw new Error('Failed to fetch games data');
-        games = await response.json();
-        console.log('Games loaded:', games.length);
+        console.log('Games data ready:', games.length);
         renderHome();
         setupSearch();
     } catch (error) {
         console.error('Initialization Error:', error);
-        document.getElementById('mainContent').innerHTML = `
-            <div class="text-center py-24 text-gray-500">
-                <p>Failed to load games data. Please try again later.</p>
-                <p class="text-xs mt-2">${error.message}</p>
-            </div>
-        `;
+        const content = document.getElementById('mainContent');
+        if (content) {
+            content.innerHTML = `
+                <div class="text-center py-24 text-gray-500">
+                    <p>Failed to initialize app correctly.</p>
+                    <p class="text-xs mt-2">${error.message}</p>
+                </div>
+            `;
+        }
     }
 }
 
@@ -193,7 +235,6 @@ function applyFilters() {
 }
 
 window.setCategory = setCategory;
-window.playLevel = playLevel;
 
 function createGameCard(game, theme) {
     const div = document.createElement('div');
@@ -281,7 +322,13 @@ function toggleFullscreen() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
 window.showHome = showHome;
 window.popOut = popOut;
 window.toggleFullscreen = toggleFullscreen;
+window.playLevel = playLevel;
+window.setCategory = setCategory;
