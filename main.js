@@ -26,9 +26,9 @@ const games = [
   {
     "id": "moto-x3m",
     "name": "Moto X3M",
-    "url": "https://games.crazygames.com/en_US/moto-x3m/index.html?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false&v=1.356",
+    "url": "https://classroom-6x.github.io/moto-x3m/",
     "category": "Sports",
-    "description": "The best moto racing game with challenging levels and crazy stunts.",
+    "description": "The best moto racing game with 22 levels, gravity-defying loops, and explosive traps. Perform stunts to shave seconds off your time!",
     "thumbnail": "https://imgs.crazygames.com/moto-x3m_1x1/20231122033955/moto-x3m_1x1-cover?format=auto&quality=100&metadata=none&width=1200"
   },
   {
@@ -106,56 +106,62 @@ function renderCategories() {
 const categoryThemes = {
     'Sports': { 
         bg: 'bg-emerald-500/20', 
-        ring: 'ring-emerald-500/30', 
+        ring: 'ring-emerald-500/40', 
         text: 'text-emerald-400', 
         accent: 'bg-emerald-500',
         border: 'hover:border-emerald-500/50',
         hoverText: 'group-hover:text-emerald-400',
+        glow: 'shadow-emerald-500/20',
         icon: 'trophy' 
     },
     'Action': { 
         bg: 'bg-rose-500/20', 
-        ring: 'ring-rose-500/30', 
+        ring: 'ring-rose-500/40', 
         text: 'text-rose-400', 
         accent: 'bg-rose-500',
         border: 'hover:border-rose-500/50',
         hoverText: 'group-hover:text-rose-400',
+        glow: 'shadow-rose-500/20',
         icon: 'zap' 
     },
     'Arcade': { 
         bg: 'bg-amber-500/20', 
-        ring: 'ring-amber-500/30', 
+        ring: 'ring-amber-500/40', 
         text: 'text-amber-400', 
         accent: 'bg-amber-500',
         border: 'hover:border-amber-500/50',
         hoverText: 'group-hover:text-amber-400',
+        glow: 'shadow-amber-500/20',
         icon: 'joystick' 
     },
     'Puzzle': { 
         bg: 'bg-cyan-500/20', 
-        ring: 'ring-cyan-500/30', 
+        ring: 'ring-cyan-500/40', 
         text: 'text-cyan-400', 
         accent: 'bg-cyan-500',
         border: 'hover:border-cyan-500/50',
         hoverText: 'group-hover:text-cyan-400',
+        glow: 'shadow-cyan-500/20',
         icon: 'brain' 
     },
     'Strategy': { 
         bg: 'bg-fuchsia-500/20', 
-        ring: 'ring-fuchsia-500/30', 
+        ring: 'ring-fuchsia-500/40', 
         text: 'text-fuchsia-400', 
         accent: 'bg-fuchsia-500',
         border: 'hover:border-fuchsia-500/50',
         hoverText: 'group-hover:text-fuchsia-400',
+        glow: 'shadow-fuchsia-500/20',
         icon: 'shield' 
     },
     'Default': { 
         bg: 'bg-indigo-500/20', 
-        ring: 'ring-indigo-500/30', 
+        ring: 'ring-indigo-500/40', 
         text: 'text-indigo-400', 
         accent: 'bg-indigo-500',
         border: 'hover:border-indigo-500/50',
         hoverText: 'group-hover:text-indigo-400',
+        glow: 'shadow-indigo-500/20',
         icon: 'gamepad' 
     }
 };
@@ -240,7 +246,7 @@ window.setCategory = setCategory;
 function createGameCard(game, theme) {
     const div = document.createElement('div');
     const glowColor = theme.text.split('-')[1];
-    div.className = `group relative bg-[#15151a] rounded-xl overflow-hidden border border-white/5 ${theme.border} transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-${glowColor}-500/20`;
+    div.className = `group relative bg-[#15151a] rounded-xl overflow-hidden border border-white/5 ${theme.border} transition-all duration-500 cursor-pointer hover:-translate-y-2 hover:shadow-[0_0_40px_-10px] ${theme.glow}`;
     div.onclick = () => playLevel(game);
 
     const thumbnailHtml = game.thumbnail 
